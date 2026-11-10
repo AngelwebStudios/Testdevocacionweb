@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vocacional Completo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Test Vocacional</h1>
+    <p class="subtitulo">Responde con honestidad para descubrir tu perfil ideal.</p>
+    
+    <form id="testForm">
+        <!-- Ingeniería -->
+        <div class="pregunta">
+            <p>1. ¿Te gusta resolver problemas matemáticos o de lógica?</p>
+            <div class="opciones">
+                <label><input type="radio" name="p1" value="ingenieria" required> Sí</label>
+                <label><input type="radio" name="p1" value="no"> No</label>
+            </div>
+        </div>
+
+        <div class="pregunta">
+            <p>2. ¿Te interesa saber cómo funcionan las aplicaciones o la tecnología?</p>
+            <div class="opciones">
+                <label><input type="radio" name="p2" value="ingenieria"> Sí</label>
+                <label><input type="radio" name="p2" value="no"> No</label>
+            </div>
+        </div>
+
+        <!-- Salud -->
+        <div class="pregunta">
+            <p>3. ¿Te genera curiosidad el funcionamiento del cuerpo humano o la medicina?</p>
+            <div class="opciones">
+                <label><input type="radio" name="p3" value="salud"> Sí</label>
+                <label><input type="radio" name="p3" value="no"> No</label>
+            </div>
+        </div>
+
+        <!-- Arte -->
+        <div class="pregunta">
+            <p>4. ¿Disfrutas de actividades creativas como dibujar, diseñar o hacer música?</p>
+            <div class="opciones">
+                <label><input type="radio" name="p4" value="arte"> Sí</label>
+                <label><input type="radio" name="p4" value="no"> No</label>
+            </div>
+        </div>
+
+        <!-- Social -->
+        <div class="pregunta">
+            <p>5. ¿Te gusta ayudar a las personas o defender causas sociales?</p>
+            <div class="opciones">
+                <label><input type="radio" name="p5" value="social"> Sí</label>
+                <label><input type="radio" name="p5" value="no"> No</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-resultado" onclick="calcularResultado()">Obtener Mi Resultado</button>
+    </form>
+
+    <div id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 

@@ -5,65 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Vocacional Completo</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Iconos bonitos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-<div class="container">
-    <h1>Test Vocacional</h1>
-    <p class="subtitulo">Responde con honestidad para descubrir tu perfil ideal.</p>
-    
-    <form id="testForm">
-        <!-- Ingeniería -->
-        <div class="pregunta">
-            <p>1. ¿Te gusta resolver problemas matemáticos o de lógica?</p>
-            <div class="opciones">
-                <label><input type="radio" name="p1" value="ingenieria" required> Sí</label>
-                <label><input type="radio" name="p1" value="no"> No</label>
-            </div>
+    <!-- Franja superior solicitada -->
+    <div class="franja-superior">
+        <p><i class="fa-solid fa-graduation-cap"></i> Espero que puedas encontrar lo que te gusta</p>
+    </div>
+
+    <div class="container">
+        <!-- Encabezado con imagen ilustrativa -->
+        <div class="header-banner">
+            <img src="https://unsplash.com" alt="Vocación">
+            <h1>Descubre Tu Futuro Profesional</h1>
+            <p class="subtitulo">Responde las 20 preguntas seleccionando Sí o No para obtener un análisis detallado de tu carrera ideal.</p>
+        </div>
+        
+        <form id="testForm">
+            <!-- Bloque 1: Ciencias y Tecnología -->
+            <div class="categoria-titulo"><i class="fa-solid fa-laptop-code"></i> Ingeniería y Tecnología</div>
+            <div class="pregunta"><p>1. ¿Te gusta resolver problemas matemáticos o acertijos lógicos?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p1" value="ingenieria" required> Sí</label><label class="opc-no"><input type="radio" name="p1" value="no"> No</label></div></div>
+            <div class="pregunta"><p>2. ¿Te interesa saber cómo funcionan las aplicaciones móviles o la programación?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p2" value="ingenieria"> Sí</label><label class="opc-no"><input type="radio" name="p2" value="no"> No</label></div></div>
+            <div class="pregunta"><p>3. ¿Te llama la atención el diseño de estructuras, puentes o edificaciones?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p3" value="construccion"> Sí</label><label class="opc-no"><input type="radio" name="p3" value="no"> No</label></div></div>
+            <div class="pregunta"><p>4. ¿Te gustaría trabajar desarmando y reparando equipos electrónicos o mecánicos?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p4" value="ingenieria"> Sí</label><label class="opc-no"><input type="radio" name="p4" value="no"> No</label></div></div>
+
+            <!-- Bloque 2: Salud y Ciencias Biológicas -->
+            <div class="categoria-titulo"><i class="fa-solid fa-heart-pulse"></i> Salud y Bienestar</div>
+            <div class="pregunta"><p>5. ¿Te genera curiosidad el funcionamiento del cuerpo humano o las enfermedades?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p5" value="salud"> Sí</label><label class="opc-no"><input type="radio" name="p5" value="no"> No</label></div></div>
+            <div class="pregunta"><p>6. ¿Tendrías la paciencia y vocación para cuidar a personas enfermas o heridas?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p6" value="salud"> Sí</label><label class="opc-no"><input type="radio" name="p6" value="no"> No</label></div></div>
+            <div class="pregunta"><p>7. ¿Te interesaría investigar sobre medicamentos, plantas medicinales o laboratorio clínico?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p7" value="salud"> Sí</label><label class="opc-no"><input type="radio" name="p7" value="no"> No</label></div></div>
+            <div class="pregunta"><p>8. ¿Te gustaría trabajar por la salud mental y emocional de los demás?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p8" value="social"> Sí</label><label class="opc-no"><input type="radio" name="p8" value="no"> No</label></div></div>
+
+            <!-- Bloque 3: Arte y Diseño Creativo -->
+            <div class="categoria-titulo"><i class="fa-solid fa-palette"></i> Arte y Expresión Creativa</div>
+            <div class="pregunta"><p>9. ¿Disfrutas pasar tiempo dibujando, pintando o editando imágenes visuales?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p9" value="dibujo"> Sí</label><label class="opc-no"><input type="radio" name="p9" value="no"> No</label></div></div>
+            <div class="pregunta"><p>10. ¿Te fijas mucho en la estética de los espacios, la ropa o el diseño de los logos?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p10" value="dibujo"> Sí</label><label class="opc-no"><input type="radio" name="p10" value="no"> No</label></div></div>
+            <div class="pregunta"><p>11. ¿Te gusta escribir historias, poemas o crear contenido audiovisual original?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p11" value="arte"> Sí</label><label class="opc-no"><input type="radio" name="p11" value="no"> No</label></div></div>
+            <div class="pregunta"><p>12. ¿Te apasiona la música, el teatro, la fotografía o el cine?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p12" value="arte"> Sí</label><label class="opc-no"><input type="radio" name="p12" value="no"> No</label></div></div>
+
+            <!-- Bloque 4: Deportes y Actividad Física -->
+            <div class="categoria-titulo"><i class="fa-solid fa-dumbbell"></i> Deportes y Educación Física</div>
+            <div class="pregunta"><p>13. ¿Practicas deportes de forma constante o te mantienes al tanto de entrenamientos físicos?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p13" value="deporte"> Sí</label><label class="opc-no"><input type="radio" name="p13" value="no"> No</label></div></div>
+            <div class="pregunta"><p>14. ¿Te motivaría liderar un equipo deportivo o guiar las rutinas de ejercicio de otros?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p14" value="deporte"> Sí</label><label class="opc-no"><input type="radio" name="p14" value="no"> No</label></div></div>
+            <div class="pregunta"><p>15. ¿Te gustaría enseñar a niños y jóvenes la importancia de la educación física?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p15" value="deporte"> Sí</label><label class="opc-no"><input type="radio" name="p15" value="no"> No</label></div></div>
+
+            <!-- Bloque 5: Ciencias Sociales, Leyes y Negocios -->
+            <div class="categoria-titulo"><i class="fa-solid fa-scale-balanced"></i> Ciencias Sociales y Gestión</div>
+            <div class="pregunta"><p>16. ¿Te interesan los temas relacionados con las leyes, la política o la justicia social?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p16" value="social"> Sí</label><label class="opc-no"><input type="radio" name="p16" value="no"> No</label></div></div>
+            <div class="pregunta"><p>17. ¿Te consideras una persona buena negociando, vendiendo productos o liderando proyectos?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p17" value="negocios"> Sí</label><label class="opc-no"><input type="radio" name="p17" value="no"> No</label></div></div>
+            <div class="pregunta"><p>18. ¿Te gusta dar consejos, escuchar problemas ajenos o enseñar cosas nuevas?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p18" value="social"> Sí</label><label class="opc-no"><input type="radio" name="p18" value="no"> No</label></div></div>
+            <div class="pregunta"><p>19. ¿Prefieres los trabajos de oficina que requieran organización de documentos o presupuestos?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p19" value="negocios"> Sí</label><label class="opc-no"><input type="radio" name="p19" value="no"> No</label></div></div>
+            <div class="pregunta"><p>20. ¿Te gustaría emprender tu propio negocio o administrar una gran empresa?</p>
+                <div class="opciones"><label class="opc-si"><input type="radio" name="p20" value="negocios"> Sí</label><label class="opc-no"><input type="radio" name="p20" value="no"> No</label></div></div>
+
+            <button type="button" class="btn-resultado" onclick="calcularResultado()">Obtener Mi Resultado Completo</button>
+        </form>
+
+        <!-- Contenedor del Resultado Moderno -->
+        <div id="resultado" class="resultado-caja">
+            <h2><i class="fa-solid fa-circle-check"></i> Tu Análisis Vocacional</h2>
+            <p id="resultado-texto"></p>
         </div>
 
-        <div class="pregunta">
-            <p>2. ¿Te interesa saber cómo funcionan las aplicaciones o la tecnología?</p>
-            <div class="opciones">
-                <label><input type="radio" name="p2" value="ingenieria"> Sí</label>
-                <label><input type="radio" name="p2" value="no"> No</label>
-            </div>
-        </div>
-
-        <!-- Salud -->
-        <div class="pregunta">
-            <p>3. ¿Te genera curiosidad el funcionamiento del cuerpo humano o la medicina?</p>
-            <div class="opciones">
-                <label><input type="radio" name="p3" value="salud"> Sí</label>
-                <label><input type="radio" name="p3" value="no"> No</label>
-            </div>
-        </div>
-
-        <!-- Arte -->
-        <div class="pregunta">
-            <p>4. ¿Disfrutas de actividades creativas como dibujar, diseñar o hacer música?</p>
-            <div class="opciones">
-                <label><input type="radio" name="p4" value="arte"> Sí</label>
-                <label><input type="radio" name="p4" value="no"> No</label>
-            </div>
-        </div>
-
-        <!-- Social -->
-        <div class="pregunta">
-            <p>5. ¿Te gusta ayudar a las personas o defender causas sociales?</p>
-            <div class="opciones">
-                <label><input type="radio" name="p5" value="social"> Sí</label>
-                <label><input type="radio" name="p5" value="no"> No</label>
-            </div>
-        </div>
-
-        <button type="button" class="btn-resultado" onclick="calcularResultado()">Obtener Mi Resultado</button>
-    </form>
-
-    <div id="resultado"></div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+        <!-- Sección de Universidades en Charallave -->
+        <div class="seccion-universidades">
+            <button type="button" class="btn-uni-toggle" onclick="toggleUniversidades()">
+                <i class="fa-solid fa-location-dot"></i> Ver Universidades cerca de Charallave, Miranda
+            </button>
+            
+            <div id="lista-universidades" class="uni-lista-contenedor">
+                
+                <!-- Universidad 1 -->
+                <div class="uni-item">
+                    <button class="uni-nombre" onclick="toggleCarreras('carreras-unexpo')">
+                        UNEXPO (Vicerrectorado Luis Caballero Mejías - Núcleo Charallave) <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div id="carreras-unexpo" class="carreras-lista">
+                        <ul>
+                            <li>Ingeniería Mecatrónica</li>
+                            <li>T.S.U. en Electricidad</li>
+                            <li>T.S.U. en Mecánica</li>
 

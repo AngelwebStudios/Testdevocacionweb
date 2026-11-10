@@ -1,1 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #7f8c8d;
+}
+
+.pregunta {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.pregunta p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.opciones label {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn-resultado {
+    display: block;
+    width: 100%;
+    background-color: #2ecc71; /* El botón verde solicitado */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-resultado:hover {
+    background-color: #27ae60;
+}
+
+#resultado {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e8f8f5;
+    border-left: 5px solid #2ecc71;
+    border-radius: 4px;
+    display: none;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
 

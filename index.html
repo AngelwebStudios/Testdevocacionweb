@@ -5,169 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Vocacional</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
-    <div class="franja-superior">
-        <p><i class="fa-solid fa-graduation-cap"></i> Espero que puedas encontrar lo que te gusta</p>
-    </div>
 
-    <div class="container">
-        <div class="header-banner" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://unsplash.com'); background-size: cover; background-position: center;">
-            <h1>Descubre Tu Futuro Profesional</h1>
-            <p class="subtitulo">Responde estas 10 preguntas con Sí o No y presiona el botón verde.</p>
-        </div>
-        
-        <form id="testForm">
-            <div class="categoria-titulo"><i class="fa-solid fa-laptop-code"></i> Ingeniería y Tecnología</div>
-            <div class="pregunta"><p>1. ¿Te gusta resolver problemas matemáticos, lógica o programación?</p>
-                <div class="opciones"><label><input type="radio" name="p1" value="ingenieria" required> Sí</label><label><input type="radio" name="p1" value="no"> No</label></div></div>
-            <div class="pregunta"><p>2. ¿Te llama la atención diseñar estructuras, puentes o edificaciones?</p>
-                <div class="opciones"><label><input type="radio" name="p2" value="construccion" required> Sí</label><label><input type="radio" name="p2" value="no"> No</label></div></div>
+    <div class="franja">Espero que puedas encontrar lo que te gusta</div>
 
-            <div class="categoria-titulo"><i class="fa-solid fa-heart-pulse"></i> Salud y Bienestar</div>
-            <div class="pregunta"><p>3. ¿Te da curiosidad el cuerpo humano, la medicina o el laboratorio?</p>
-                <div class="opciones"><label><input type="radio" name="p3" value="salud" required> Sí</label><label><input type="radio" name="p3" value="no"> No</label></div></div>
-            <div class="pregunta"><p>4. ¿Tendrías la vocación para cuidar y atender a personas enfermas?</p>
-                <div class="opciones"><label><input type="radio" name="p4" value="salud" required> Sí</label><label><input type="radio" name="p4" value="no"> No</label></div></div>
-
-            <div class="categoria-titulo"><i class="fa-solid fa-palette"></i> Arte, Dibujo y Diseño</div>
-            <div class="pregunta"><p>5. ¿Disfrutas dibujar, pintar, diseñar logos o editar imágenes?</p>
-                <div class="opciones"><label><input type="radio" name="p5" value="dibujo" required> Sí</label><label><input type="radio" name="p5" value="no"> No</label></div></div>
-            <div class="pregunta"><p>6. ¿Te apasiona la música, fotografía, actuación o crear videos?</p>
-                <div class="opciones"><label><input type="radio" name="p6" value="arte" required> Sí</label><label><input type="radio" name="p6" value="no"> No</label></div></div>
-
-            <div class="categoria-titulo"><i class="fa-solid fa-dumbbell"></i> Deportes y Actividad Física</div>
-            <div class="pregunta"><p>7. ¿Practicas deportes seguido o te gustan los entrenamientos físicos?</p>
-                <div class="opciones"><label><input type="radio" name="p7" value="deporte" required> Sí</label><label><input type="radio" name="p7" value="no"> No</label></div></div>
-            <div class="pregunta"><p>8. ¿Te gustaría ser entrenador o enseñar educación física a jóvenes?</p>
-                <div class="opciones"><label><input type="radio" name="p8" value="deporte" required> Sí</label><label><input type="radio" name="p8" value="no"> No</label></div></div>
-
-            <div class="categoria-titulo"><i class="fa-solid fa-scale-balanced"></i> Leyes, Educación y Negocios</div>
-            <div class="pregunta"><p>9. ¿Te interesan las leyes, la psicología o enseñar a otras personas?</p>
-                <div class="opciones"><label><input type="radio" name="p9" value="social" required> Sí</label><label><input type="radio" name="p9" value="no"> No</label></div></div>
-            <div class="pregunta"><p>10. ¿Te gusta negociar, vender o administrar tu propio negocio?</p>
-                <div class="opciones"><label><input type="radio" name="p10" value="negocios" required> Sí</label><label><input type="radio" name="p10" value="no"> No</label></div></div>
-
-            <button type="button" class="btn-resultado" onclick="calcularResultado()">
-                <i class="fa-solid fa-check-double"></i> Obtener Mi Resultado
-            </button>
-        </form>
-
-        <div id="resultado" class="resultado-caja">
-            <h2><i class="fa-solid fa-star"></i> Tus Carreras Recomendadas</h2>
-            <p id="resultado-texto"></p>
+    <div class="contenedor">
+        <div class="portada">
+            <h1>Test Vocacional</h1>
+            <p>Responde estas 10 preguntas con Sí o No</p>
         </div>
 
-        <div class="seccion-universidades">
-            <button type="button" class="btn-uni-toggle" onclick="toggleUniversidades()">
-                <i class="fa-solid fa-building-columns"></i> Universidades cerca de Charallave, Miranda
-            </button>
-            
-            <div id="lista-universidades" class="uni-lista-contenedor">
-                <div class="uni-item">
-                    <button type="button" class="uni-nombre" onclick="toggleCarreras('c1')">
-                        <span>UNEXPO (Núcleo Charallave)</span><i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div id="c1" class="carreras-lista">
-                        <ul>
-                            <li>Ingeniería Mecatrónica</li>
-                            <li>T.S.U. en Electricidad y Mecánica</li>
-                            <li>T.S.U. en Construcción Civil</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="uni-item">
-                    <button type="button" class="uni-nombre" onclick="toggleCarreras('c2')">
-                        <span>UNEFA (Extensión Charallave)</span><i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div id="c2" class="carreras-lista">
-                        <ul>
-                            <li>Ingeniería de Sistemas y Civil</li>
-                            <li>Licenciatura en Enfermería</li>
-                            <li>T.S.U. en Análisis de Sistemas</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="uni-item">
-                    <button type="button" class="uni-nombre" onclick="toggleCarreras('c3')">
-                        <span>UBV / Misión Sucre (Cristóbal Rojas)</span><i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div id="c3" class="carreras-lista">
-                        <ul>
-                            <li>Estudios Jurídicos (Derecho)</li>
-                            <li>Educación (Mención Educación Física)</li>
-                            <li>Comunicación Social</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="uni-item">
-                    <button type="button" class="uni-nombre" onclick="toggleCarreras('c4')">
-                        <span>Institutos Universitarios (Valles del Tuy)</span><i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div id="c4" class="carreras-lista">
-                        <ul>
-                            <li>T.S.U. en Administración y Contaduría</li>
-                            <li>T.S.U. en Informática</li>
-                            <li>T.S.U. en Diseño Gráfico</li>
-                        </ul>
-                    </div>
+        <form id="formulario">
+            <div class="pregunta">
+                <p>1. ¿Te gusta resolver problemas de matemáticas o lógica?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p1" value="ing"> Sí</label>
+                    <label><input type="radio" name="p1" value="no"> No</label>
                 </div>
             </div>
+
+            <div class="pregunta">
+                <p>2. ¿Te interesa la programación o arreglar computadoras y equipos?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p2" value="ing"> Sí</label>
+                    <label><input type="radio" name="p2" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>3. ¿Te da curiosidad cómo funciona el cuerpo humano o la medicina?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p3" value="salud"> Sí</label>
+                    <label><input type="radio" name="p3" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>4. ¿Te gustaría cuidar y ayudar a recuperarse a personas enfermas?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p4" value="salud"> Sí</label>
+                    <label><input type="radio" name="p4" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>5. ¿Disfrutas dibujar, diseñar logos o editar fotos y videos?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p5" value="arte"> Sí</label>
+                    <label><input type="radio" name="p5" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>6. ¿Te llama la atención diseñar casas, edificios o espacios bonitos?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p6" value="arte"> Sí</label>
+                    <label><input type="radio" name="p6" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>7. ¿Practicas deportes seguido o te gustan los ejercicios físicos?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p7" value="deporte"> Sí</label>
+                    <label><input type="radio" name="p7" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>8. ¿Te gustaría ser entrenador o profesor de educación física?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p8" value="deporte"> Sí</label>
+                    <label><input type="radio" name="p8" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>9. ¿Te gusta defender causas justas, las leyes o ayudar con consejos?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p9" value="social"> Sí</label>
+                    <label><input type="radio" name="p9" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="pregunta">
+                <p>10. ¿Te gustaría administrar un negocio o vender productos?</p>
+                <div class="botones-opcion">
+                    <label><input type="radio" name="p10" value="negocios"> Sí</label>
+                    <label><input type="radio" name="p10" value="no"> No</label>
+                </div>
+            </div>
+
+            <button type="button" class="btn-verde" onclick="verResultado()">Ver Mis 2 Carreras Ideales</button>
+        </form>
+
+        <!-- Aquí abajo sale la respuesta -->
+        <div id="caja-resultado" class="resultado">
+            <h2>Tus 2 Carreras Recomendadas:</h2>
+            <p id="texto-resultado"></p>
         </div>
+
+        <!-- Botón que lleva a la página completa de universidades -->
+        <a href="universidades.html" class="btn-universidades">
+            Ver Universidades y Carreras en Charallave
+        </a>
     </div>
 
-    <script>
-        function calcularResultado() {
-            const form = document.getElementById('testForm');
-            if (!form.checkValidity()) {
-                alert("⚠️ Responde las 10 preguntas antes de darle al botón verde.");
-                return;
-            }
-            const respuestas = new FormData(form);
-            let p = { ingenieria: 0, construccion: 0, salud: 0, dibujo: 0, arte: 0, deporte: 0, social: 0, negocios: 0 };
-            for (let val of respuestas.values()) { if (p[val] !== undefined) p[val]++; }
-
-            let texto = "";
-            if (p.dibujo > 0 && p.salud > 0) {
-                texto = "¡Gran combinación! Te gusta el dibujo y la salud. Destacas en: <strong>Arquitectura, Diseño Hospitalario, Enfermería, Odontología o Fisioterapia</strong>.";
-            } else if (p.dibujo > 0 && (p.ingenieria > 0 || p.construccion > 0)) {
-                texto = "Combinas dibujo y estructura. Tus carreras ideales son: <strong>Arquitectura, Ingeniería Civil, Diseño Industrial o Ingeniería en Diseño</strong>.";
-            } else if (p.dibujo > 0) {
-                texto = "Tu fuerte es el dibujo y lo visual. Destacas en: <strong>Diseño Gráfico, Arquitectura, Ilustración Digital, Artes Plásticas o Animación</strong>.";
-            } else if (p.deporte > 0) {
-                texto = "Tu perfil es físico y deportivo. Tus mejores opciones son: <strong>Profesor de Educación Física, Entrenador Deportivo, Fisioterapia o Preparador Físico</strong>.";
-            } else {
-                let maxArea = "ingenieria", maxVal = -1;
-                for (let area in p) { if (p[area] > maxVal) { maxVal = p[area]; maxArea = area; } }
-                if (maxVal === 0) {
-                    texto = "Marcaste 'No' en todo. ¡Marca 'Sí' en lo que más te guste!";
-                } else {
-                    const carreras = {
-ingenieria: "<strong>Ingeniería de Sistemas, Mecatrónica, Informática o Telecomunicaciones</strong>.",
-construccion: "<strong>Ingeniería Civil, Arquitectura o Construcción Civil</strong>.",
-salud: "Medicina, Enfermería, Bioanálisis, Farmacia u Odontología.",
-arte: "Comunicación Social, Producción Audiovisual, Música o Publicidad.",
-social: "Derecho, Psicología, Educación (Docencia) o Trabajo Social.",
-negocios: "Administración de Empresas, Contaduría Pública, Economía o Marketing."
-};
-texto = "Tus carreras recomendadas son: " + carreras[maxArea];
-}
-}
-const caja = document.getElementById('resultado');
-document.getElementById('resultado-texto').innerHTML = texto;
-caja.style.display = 'block';
-caja.scrollIntoView({ behavior: 'smooth' });
-}
-function toggleUniversidades() {
-const l = document.getElementById('lista-universidades');
-l.style.display = (l.style.display === 'block') ? 'none' : 'block';
-if (l.style.display === 'block') l.scrollIntoView({ behavior: 'smooth' });
-}
-function toggleCarreras(id) {
-const s = document.getElementById(id);
-s.style.display = (s.style.display === 'block') ? 'none' : 'block';
-}
+    <script src="script.js"></script>
+</body>
+</html>
